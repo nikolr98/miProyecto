@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     @SuppressLint("WrongConstant")
     public void grabar(View view) {
+
         outputFile = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Grabacion.mp3";
         miGrabacion = new MediaRecorder();
         miGrabacion.setAudioSource(MediaRecorder.AudioSource.MIC);
