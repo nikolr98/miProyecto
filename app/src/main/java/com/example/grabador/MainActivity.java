@@ -15,6 +15,7 @@ import java.io.IOException;
 public class MainActivity extends AppCompatActivity {
     private MediaRecorder miGrabacion;
     private String outputFile = null;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         }
         Toast.makeText(getApplicationContext(), "La grabación comenzó", Toast.LENGTH_LONG).show();
     }
+
     public void detener(View view) {
         if (miGrabacion != null) {
             miGrabacion.stop();
@@ -49,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "El audio  grabado con éxito", Toast.LENGTH_LONG).show();
         }
     }
+
     public void reproducir(View view) {
         MediaPlayer m = new MediaPlayer();
         try {
